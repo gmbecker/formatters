@@ -1152,7 +1152,7 @@ paginate_to_mpfs <- function(obj,
                              rep_cols = NULL,
                              # rep_cols = num_rep_cols(obj),
                              # col_gap = 3, # this could be change in default - breaking change
-                             col_gap = 2,
+                             col_gap = 3,
                              fontspec = font_spec(font_family, font_size, lineheight),
                              verbose = FALSE) {
   newdev <- open_font_dev(fontspec)

@@ -192,7 +192,7 @@ setGeneric(
   "nlines",
   ## XXX TODO come back and add fontspec default value once not having
   ## it has found all the disconnection breakages
-  function(x, colwidths = NULL, max_width = NULL, fontspec, col_gap) standardGeneric("nlines")
+  function(x, colwidths = NULL, max_width = NULL, fontspec, col_gap = NULL) standardGeneric("nlines")
 )
 
 ## XXX beware. I think it is dangerous

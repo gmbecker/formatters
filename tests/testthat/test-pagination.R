@@ -466,9 +466,13 @@ test_that("rep_cols works as intended for listings and tables", {
   expect_true(grepl(out[51], pattern = "vs")) # vs is repeated
   expect_true(grepl(out[51], pattern = "gear")) # gear is repeated
 
-  out <- export_as_txt(blmf, rep_cols = 1, cpp = 70) %>%
-    strsplit("\n") %>%
-    unlist()
-  expect_true(grepl(out[51], pattern = "vs")) # vs is repeated
-  expect_false(grepl(out[51], pattern = "gear")) # gear is NOT repeated
+  ## listings should always repeat all of their key columns,
+  ## if the user wants to modify how many columns are repeated
+  ## they can change which columns are key columns after creation
+  ## this test is problematic.
+  ## out <- export_as_txt(blmf, rep_cols = 1, cpp = 70) %>%
+  ##   strsplit("\n") %>%
+  ##   unlist()
+  ## expect_true(grepl(out[51], pattern = "vs")) # vs is repeated
+  ## expect_false(grepl(out[51], pattern = "gear")) # gear is NOT repeated
 })

@@ -54,7 +54,7 @@ paginate_to_mpfs(
   pg_size_spec = NULL,
   page_num = default_page_number(),
   rep_cols = NULL,
-  col_gap = 2,
+  col_gap = 3,
   fontspec = font_spec(font_family, font_size, lineheight),
   verbose = FALSE
 )
