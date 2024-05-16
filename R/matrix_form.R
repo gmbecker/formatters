@@ -449,7 +449,7 @@ infer_ref_info <- function(mform, colspace_only) {
   ## they're nested so \\2 is the inner one, without the brackets
   ## include space in front of { so we don't catch \{ when
   ## rtfs want to pass markup through
-  refs <- gsub("^[^{]*([{]([^}]+)[}]){0,1}$", "\\2", strs)
+  refs <- gsub("^[^{]*( [{]([^}]+)[}]){0,1}$", "\\2", strs)
   ## handle spanned values
   refs[!mf_display(mform)[idx, ]] <- ""
 
